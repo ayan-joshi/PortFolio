@@ -4,7 +4,7 @@ Beautiful HTML,CSS and Bootstrap Portfolio
 
 # DEMO
 
-https://ayan-joshi.github.io/
+https://ayan-joshi.github.io/PortFolio
 
 # FEATURES
 
