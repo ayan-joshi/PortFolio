@@ -199,3 +199,28 @@ img {
     border-radius: 100px;
     font-size: 24px;
 }
+
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust gap as needed */
+}
+
+.col-md-6 {
+    flex: 1 1 45%; /* Adjust the percentage as needed to fit your design */
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.card-custom {
+    height: 100%; /* Ensure cards take up the full height available */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-custom-content {
+    flex-grow: 1;
+}
