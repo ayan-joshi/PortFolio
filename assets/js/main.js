@@ -1,15 +1,48 @@
-AOS.init();
-// You can also pass an optional settings object
-// below listed default settings
+// AOS Animations
 AOS.init({
-  
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 700, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
+    offset: 100,
+    delay: 0,
+    duration: 650,
+    easing: 'ease',
+    once: true,
+    mirror: false,
+    anchorPlacement: 'top-bottom',
 });
+
+// Typing Animation
+const roles = [
+    'Founding Engineer',
+    'Full Stack Developer',
+    'AI Automation Builder',
+    'LLM Integration Specialist',
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typedEl = document.getElementById('typed-text');
+
+function type() {
+    if (!typedEl) return;
+    const current = roles[roleIndex];
+
+    if (isDeleting) {
+        typedEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typedEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    if (!isDeleting && charIndex === current.length) {
+        setTimeout(() => { isDeleting = true; }, 1600);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+    }
+
+    const speed = isDeleting ? 55 : 100;
+    setTimeout(type, speed);
+}
+
+setTimeout(type, 800);
