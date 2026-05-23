@@ -21,35 +21,6 @@ if (cursorGlow) {
     }
 }
 
-// Stats Count-up Animation
-function countUp(el) {
-    const target = parseInt(el.dataset.target);
-    const prefix = el.dataset.prefix || '';
-    const suffix = el.dataset.suffix || '';
-    const duration = 1600;
-    const steps = 60;
-    const increment = target / steps;
-    let current = 0;
-    let step = 0;
-    const timer = setInterval(() => {
-        step++;
-        current = Math.min(Math.round(increment * step), target);
-        el.textContent = prefix + current + suffix;
-        if (step >= steps) clearInterval(timer);
-    }, duration / steps);
-}
-
-const statEls = document.querySelectorAll('.stat-number');
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            countUp(entry.target);
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.6 });
-statEls.forEach(el => statsObserver.observe(el));
-
 // Active Nav Link on Scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link[href^="#"]');

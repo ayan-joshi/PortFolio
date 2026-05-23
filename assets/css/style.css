@@ -483,45 +483,6 @@ img { width: 100%; }
     50% { transform: translate(-18px, 18px); }
 }
 
-/* ─── STATS SECTION ─────────────────────────────── */
-.stats-section {
-    padding: 48px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.stat-card {
-    padding: 28px 16px;
-    border-radius: 16px;
-    background: rgba(3, 63, 71, 0.6);
-    border: 1px solid rgba(224, 247, 128, 0.12);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: all 0.35s ease;
-}
-
-.stat-card:hover {
-    border-color: rgba(224, 247, 128, 0.4);
-    box-shadow: 0 0 28px rgba(224, 247, 128, 0.08), -4px 4px 0 0 var(--color-brand);
-    transform: translate(2px, -4px);
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-brand);
-    line-height: 1;
-    margin-bottom: 10px;
-    font-family: var(--font-base);
-}
-
-.stat-label {
-    font-size: 0.76rem;
-    color: var(--color-body);
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-    font-weight: 600;
-}
-
 /* ─── TIMELINE DOT PULSE (current role) ─────────── */
 .timeline-dot.pulse {
     animation: dotPulse 2.2s ease-in-out infinite;
