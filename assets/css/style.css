@@ -345,6 +345,10 @@ img { width: 100%; }
     background: linear-gradient(135deg, #3a0a4a, #6a0f7a);
 }
 
+.project-card-header--4 {
+    background: linear-gradient(135deg, #1a2a0a, #3a5a0d);
+}
+
 .project-icon {
     font-size: 44px;
     color: var(--color-brand);
