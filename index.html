@@ -5,7 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayan Joshi | Portfolio</title>
+    <title>Ayan Joshi | Full-Stack Engineer & AI Builder</title>
+    <meta name="description" content="Ayan Joshi — Full-stack engineer specializing in AI automation and LLM integrations. Building products that drive real business impact.">
+    <meta name="author" content="Ayan Joshi">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayanjoshi.in">
+    <meta property="og:title" content="Ayan Joshi | Full-Stack Engineer & AI Builder">
+    <meta property="og:description" content="Full-stack engineer specializing in AI automation and LLM integrations — building products that drive real business impact.">
+    <meta property="og:image" content="https://ayanjoshi.in/assets/images/person.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ayanjoshi18">
+    <meta name="twitter:title" content="Ayan Joshi | Full-Stack Engineer & AI Builder">
+    <meta name="twitter:description" content="Full-stack engineer specializing in AI automation and LLM integrations — building products that drive real business impact.">
+    <meta name="twitter:image" content="https://ayanjoshi.in/assets/images/person.jpg">
+    <link rel="canonical" href="https://ayanjoshi.in">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23033f47'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='14' fill='%23e0f780'>AJ</text></svg>">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
@@ -13,6 +27,9 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <div id="cursor-glow" aria-hidden="true"></div>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -42,6 +59,11 @@
 
         <!-- HOME -->
         <section id="home" class="full-height px-lg-5">
+            <div class="hero-orbs" aria-hidden="true">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
@@ -74,6 +96,38 @@
             </div>
         </section>
 
+        <!-- STATS -->
+        <section id="stats" class="stats-section px-lg-5">
+            <div class="container">
+                <div class="row gy-4 text-center">
+                    <div class="col-6 col-md-3" data-aos="fade-up">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="5" data-prefix="Rs." data-suffix="L+">Rs.0L+</div>
+                            <div class="stat-label">Monthly Revenue Driven</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="3" data-suffix="x">0x</div>
+                            <div class="stat-label">Organic Traffic Growth</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="85" data-suffix="%+">0%+</div>
+                            <div class="stat-label">LLM Search Visibility</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="16" data-suffix="hrs/wk">0hrs/wk</div>
+                            <div class="stat-label">Ops Time Automated</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- EXPERIENCE -->
         <section id="experience" class="full-height px-lg-5">
             <div class="container">
@@ -87,7 +141,7 @@
                 <div class="timeline">
 
                     <div class="timeline-item" data-aos="fade-up">
-                        <div class="timeline-dot"></div>
+                        <div class="timeline-dot pulse"></div>
                         <div class="timeline-content bg-base rounded-4 shadow-effect p-4">
                             <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
                                 <div>

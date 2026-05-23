@@ -396,6 +396,142 @@ img { width: 100%; }
 
 #contact input.form-control { height: 46px; }
 
+/* ─── SCROLL PROGRESS ───────────────────────────── */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-brand), var(--color-brand2));
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(224, 247, 128, 0.7);
+    pointer-events: none;
+}
+
+/* ─── CURSOR GLOW ───────────────────────────────── */
+#cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224, 247, 128, 0.055) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    transition: left 0.12s ease, top 0.12s ease;
+    will-change: left, top;
+}
+
+/* ─── HERO ORBS ─────────────────────────────────── */
+#home { position: relative; overflow: hidden; }
+#home .container { position: relative; z-index: 1; }
+
+.hero-orbs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.13;
+}
+
+.orb-1 {
+    width: 560px;
+    height: 560px;
+    background: var(--color-brand);
+    top: -120px;
+    right: -80px;
+    animation: orbFloat1 9s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 320px;
+    height: 320px;
+    background: #38bdf8;
+    bottom: -40px;
+    left: 15%;
+    animation: orbFloat2 11s ease-in-out infinite;
+}
+
+.orb-3 {
+    width: 220px;
+    height: 220px;
+    background: var(--color-brand2);
+    top: 35%;
+    left: 55%;
+    animation: orbFloat3 7s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-25px, 35px) scale(1.06); }
+}
+
+@keyframes orbFloat2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -25px) scale(0.94); }
+}
+
+@keyframes orbFloat3 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-18px, 18px); }
+}
+
+/* ─── STATS SECTION ─────────────────────────────── */
+.stats-section {
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stat-card {
+    padding: 28px 16px;
+    border-radius: 16px;
+    background: rgba(3, 63, 71, 0.6);
+    border: 1px solid rgba(224, 247, 128, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.35s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(224, 247, 128, 0.4);
+    box-shadow: 0 0 28px rgba(224, 247, 128, 0.08), -4px 4px 0 0 var(--color-brand);
+    transform: translate(2px, -4px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-brand);
+    line-height: 1;
+    margin-bottom: 10px;
+    font-family: var(--font-base);
+}
+
+.stat-label {
+    font-size: 0.76rem;
+    color: var(--color-body);
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 600;
+}
+
+/* ─── TIMELINE DOT PULSE (current role) ─────────── */
+.timeline-dot.pulse {
+    animation: dotPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(224, 247, 128, 0.2); }
+    50% { box-shadow: 0 0 0 10px rgba(224, 247, 128, 0.0), 0 0 20px rgba(224, 247, 128, 0.45); }
+}
+
 /* ─── SCROLLBAR ─────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-base2); }
